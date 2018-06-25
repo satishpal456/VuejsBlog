@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- or -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>satishblog</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+    <script type="text/javascript">
+      $(function(){
+     $(document).on('click',"#top",function(){
+      $('html,body').animate({scrollTop:0},500);
+      return false;
+     });
+   });
+      $(function() {
+    var c= 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $(window).scroll(function(){
+      if ($(document).scrollTop()>-250) {
+      $('#lop').addClass('animated fadeInLeft');
+      $(this).one(c,function(){
+        $(this).removeClass('fadeInLeft');
+      });
+    }
+    })
+    });
+       $(function() {
+    var c= 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $(window).scroll(function(){
+      if ($(document).scrollTop()>1000) {
+      $('#pop').addClass('animated fadeInLeft');
+      $(this).one(c,function(){
+        $(this).removeClass('fadeInLeft');
+      });
+    }
+    })
+    });
+
+    </script>
+  </body>
+</html>
